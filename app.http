@@ -1,0 +1,67 @@
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+###
+
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjk4MjE5NTQ1fQ.P6R8LTuKvLebWsNSoTMPpJNUdvDgFS6wvbgm4j8xFu4
+
+###
+
+GET http://localhost:3000/states/:stateId/
+
+###
+
+POST http://localhost:3000/districts/
+Content-Length: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+
+DELETE http://localhost:3000/districts/:districtId/
+
+###
+
+PUT http://localhost:3000/districts/:districtId/
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+
+GET http://localhost:3000/states/:stateId/stats/
+
+###
+
+PUT http://localhost:3000/districts/:districtId/
+Content-Type: application/json
+
+{
+  "districtId": 322,
+  "districtName": "Palakkad",
+  "stateId": 17,
+  "cases": 61558,
+  "cured": 59276,
+  "active": 2095,
+  "deaths": 177
+}
